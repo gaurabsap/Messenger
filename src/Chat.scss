@@ -1,0 +1,183 @@
+body{
+    background-color: rgb(221, 221, 197);
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.144);
+
+    .name{
+        width: 18%;
+        height: 25vh;
+        margin: auto;
+        position: relative;
+        top: 30%;
+        gap: 3rem;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        
+        .cross{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color:rgb(255, 0, 0);
+            font-size: 2.3rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            h3{
+                color: black;
+                font-size: 1.6rem;
+            }
+        }
+        .field{
+            margin: 3rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.3rem;
+            input{
+                font-size: 1.6rem;
+                padding: .6rem;
+                background-color: transparent;
+                border-radius: 5px;
+                outline: none;
+                border: 1px solid gray;
+            }
+            input::placeholder{
+                font-size: 1.3rem;
+            }
+            button{
+                width: 20%;
+                font-size: 1.5rem;
+                padding: 0.8rem;
+                background-color: green;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                border: none;
+    
+            }
+            p{
+                color: red;
+                font-size: 1.4rem;
+            }
+        }
+    
+    }
+    
+
+}
+
+
+
+
+.chat{
+    margin: 50px auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: white;
+    padding: 2.5rem;
+    box-shadow: 0px 0px 1px solid black;
+    border-radius: 10px;
+    display: none;
+    .head{
+        h1{
+            text-align: center;
+            font-size: 3rem;
+        }
+    }
+    .chatting-place{
+        margin-top: 1.3rem;
+        width: 100%;
+        height: 60vh;
+        // border: 1px solid green;
+        box-shadow: 0px 0px 1px black;
+        overflow: auto;
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            // background-color: steelblue;
+            margin-right: 0.5rem;
+            padding: 0.5rem;
+            p{
+                font-size: 1.8rem;
+                padding: 1rem;
+                background-color: steelblue;
+                color: white;
+                border-radius: 10px;
+            }
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-left: 1rem;
+            padding: .4rem;
+            p{
+                font-size: 1.8rem;
+                padding: 1rem;
+                background-color: green;
+                color: white;
+                border-radius: 10px;
+            }
+        }
+    }
+    .chatting-place::-webkit-scrollbar{
+        display: none;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+        input{
+            width: 90%;
+            font-size: 1.8rem;
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            outline: none;
+            &::placeholder{
+                font-size: 1.4rem;
+            }
+        }
+        button{
+            color: green;
+            font-size: 3rem;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            transform: translateY(5px);
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .overlay{
+        width: 100%;
+        height: 100vh;
+        .name{
+            width: 60%;
+        }
+    }
+    .chat{
+        width: 80%;
+        .chatting-place{
+            .right, .left{
+                p{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
